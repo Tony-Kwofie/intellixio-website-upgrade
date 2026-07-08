@@ -1,0 +1,143 @@
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .hero-content,
+    .showcase-content,
+    .founder-grid {
+
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+
+    }
+
+    .hero-right {
+        margin-top: 0;
+    }
+
+    .trust-grid,
+    .problems-grid,
+    .industries-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+    nav,
+    .btn-demo {
+
+        display: none;
+    }
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+    .navbar {
+
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .logo img {
+
+        height: 45px;
+    }
+
+    .hero h1,
+    .about-hero h1 {
+
+        font-size: 3rem;
+    }
+
+    .section-header h2,
+    .story-content h2 {
+
+        font-size: 2.5rem;
+    }
+
+    .timeline::before {
+
+        left: 20px;
+    }
+
+    .timeline-item {
+
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .showcase-content,
+    .founder-grid {
+
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+/* ==========================================
+
+/* ==========================================
+   MOBILE FIXES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        padding-top: 140px;
+        padding-bottom: 70px;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        padding: 0 10px;
+        word-break: break-word;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}

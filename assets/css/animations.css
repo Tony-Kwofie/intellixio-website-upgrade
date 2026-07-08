@@ -1,0 +1,320 @@
+/* ==================================
+   FADE IN
+================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+.fade-in {
+
+    animation:
+        fadeIn 1s ease forwards;
+
+}
+
+/* ==================================
+   FADE UP
+================================== */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+.fade-up {
+
+    animation:
+        fadeUp .8s ease forwards;
+
+}
+
+/* ==================================
+   FLOATING EFFECT
+================================== */
+
+@keyframes float {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+.float {
+
+    animation:
+        float 6s ease-in-out infinite;
+
+}
+
+/* ==================================
+   GLOW PULSE
+================================== */
+
+@keyframes glow {
+
+    0% {
+
+        box-shadow:
+            0 0 15px rgba(59, 130, 246, .15);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 35px rgba(59, 130, 246, .30);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 15px rgba(59, 130, 246, .15);
+
+    }
+
+}
+
+.glow {
+
+    animation:
+        glow 4s ease-in-out infinite;
+
+}
+
+/* ==================================
+   HERO GRADIENT
+================================== */
+
+@keyframes gradientMove {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+.hero {
+
+    background-size: 200% 200%;
+
+    animation:
+        gradientMove 15s ease infinite;
+
+}
+
+/* ==================================
+   CARD HOVER
+================================== */
+
+.glass-card:hover,
+.trust-card:hover,
+.problem-card:hover,
+.industry-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 0 40px rgba(59, 130, 246, .25);
+
+}
+
+/* ==================================
+   BUTTON HOVER
+================================== */
+
+.btn-primary:hover,
+.btn-demo:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 0 30px rgba(59, 130, 246, .35);
+
+}
+
+.btn-secondary:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+/* ==================================
+   LOGO ANIMATION
+================================== */
+
+.logo img {
+
+    animation:
+        float 5s ease-in-out infinite;
+
+}
+
+.logo img:hover {
+
+    transform:
+        scale(1.05);
+
+}
+
+/* ==================================
+   OPS LOGO
+================================== */
+
+.ops-logo {
+
+    animation:
+        float 6s ease-in-out infinite;
+
+}
+
+/* ==================================
+   NAVBAR ENTRY
+================================== */
+
+.navbar {
+
+    animation:
+        fadeIn 1s ease;
+
+}
+
+/* ==================================
+   SCROLL REVEAL
+================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        all .8s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+/* ==================================
+   DASHBOARD PREVIEW
+================================== */
+
+.dashboard-preview {
+
+    animation:
+        float 5s ease-in-out infinite;
+
+}
+
+/* ==================================
+   CTA SECTION
+================================== */
+
+.cta-box {
+
+    animation:
+        glow 5s ease-in-out infinite;
+
+}
+
+/* ==================================
+   STAGGER DELAYS
+================================== */
+
+.delay-1 {
+
+    animation-delay: .2s;
+
+}
+
+.delay-2 {
+
+    animation-delay: .4s;
+
+}
+
+.delay-3 {
+
+    animation-delay: .6s;
+
+}
+
+.delay-4 {
+
+    animation-delay: .8s;
+
+}

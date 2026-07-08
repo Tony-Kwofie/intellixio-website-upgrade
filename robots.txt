@@ -1,0 +1,10 @@
+# Intellixio Technologies Ltd
+
+User-agent: *
+
+Allow: /
+
+Disallow: /assets/js/
+Disallow: /cgi-bin/
+
+Sitemap: https://intellixio.tech/sitemap.xml

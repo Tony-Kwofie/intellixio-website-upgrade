@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://intellixio.tech/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/index.html</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/products.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/products/intellixio-ops.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/industries.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/about.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/careers.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/contact.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/privacy-policy.html</loc>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://intellixio.tech/terms-of-service.html</loc>
+        <priority>0.4</priority>
+    </url>
+
+</urlset>

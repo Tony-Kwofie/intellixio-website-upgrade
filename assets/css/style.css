@@ -1,0 +1,1977 @@
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+
+    --bg: #050816;
+    --bg-secondary: #0B1120;
+
+    --primary: #2563EB;
+    --accent: #3B82F6;
+
+    --white: #FFFFFF;
+    --muted: #94A3B8;
+
+    --card-bg:
+        rgba(255, 255, 255, .05);
+
+    --card-border:
+        rgba(255, 255, 255, .08);
+
+    --radius: 28px;
+
+    --container: 1200px;
+
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--white);
+
+    overflow-x: hidden;
+
+    line-height: 1.7;
+
+    position: relative;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3,
+h4 {
+
+    line-height: 1.15;
+
+    text-align: center;
+
+}
+
+h1 {
+
+    font-size:
+        clamp(2.8rem, 5vw, 4.5rem);
+
+}
+
+h2 {
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+}
+
+h3 {
+
+    font-size: 1.3rem;
+
+}
+
+p {
+
+    color: var(--muted);
+
+    text-align: center;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================
+   GLOBAL LAYOUT
+========================================== */
+
+.container {
+
+    width: 92%;
+
+    max-width: var(--container);
+
+    margin: 0 auto;
+
+}
+
+section {
+
+    padding: 110px 0;
+
+}
+
+.section-header {
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+.section-header h2 {
+
+    margin-bottom: 18px;
+
+}
+
+.section-header p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+.section-tag {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(59, 130, 246, .08);
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+    margin-bottom: 18px;
+
+    font-size: .85rem;
+
+    color: white;
+
+}
+
+/* ==========================================
+   BACKGROUND EFFECTS
+========================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(circle at 20% 20%,
+            rgba(37, 99, 235, .15),
+            transparent 40%),
+
+        radial-gradient(circle at 80% 70%,
+            rgba(59, 130, 246, .08),
+            transparent 45%);
+
+    z-index: -2;
+
+}
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .02) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .02) 1px,
+            transparent 1px);
+
+    background-size: 40px 40px;
+
+    z-index: -1;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+
+    position: fixed;
+
+    top: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 95%;
+
+    max-width: 1200px;
+
+    height: 82px;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        rgba(11, 17, 32, .92);
+
+    backdrop-filter: blur(25px);
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .20);
+
+    z-index: 9999;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.logo img {
+
+    height: 52px;
+
+    width: auto;
+
+    border-radius: 12px;
+
+    transition: .3s ease;
+
+}
+
+.logo img:hover {
+
+    transform: scale(1.03);
+
+}
+
+/* ==========================================
+   DESKTOP NAV
+========================================== */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.nav-links a {
+
+    color: white;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+    transition: .3s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================
+   BOOK DEMO BUTTON
+========================================== */
+
+.btn-demo {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+
+}
+
+.btn-demo:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================
+   PRODUCTS DROPDOWN
+========================================== */
+
+.dropdown {
+
+    position: relative;
+
+}
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%) translateY(10px);
+
+    min-width: 320px;
+
+    background:
+        rgba(11, 17, 32, .98);
+
+    backdrop-filter: blur(25px);
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+    border-radius: 20px;
+
+    padding: 12px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s ease;
+
+}
+
+.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%) translateY(0);
+
+}
+
+.dropdown-menu a {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+}
+
+.dropdown-menu a:hover {
+
+    background:
+        rgba(59, 130, 246, .08);
+
+}
+
+/* ==========================================
+   MOBILE MENU BUTTON
+========================================== */
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.mobile-nav {
+
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+
+    right: 10px;
+
+    width: calc(100vw - 20px);
+
+    max-width: 320px;
+
+    background:
+        rgba(11, 17, 32, .98);
+
+    backdrop-filter: blur(25px);
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+    border-radius: 24px;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+}
+
+.mobile-nav.active {
+
+    display: block;
+
+}
+
+.mobile-nav ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.mobile-nav a {
+
+    display: block;
+
+    text-align: center;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    color: white;
+
+}
+
+/* ==========================================
+   CUTE OPS LOGO
+========================================== */
+
+.ops-logo {
+
+    width: 130px;
+
+    height: 130px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(135deg,
+            rgba(37, 99, 235, .18),
+            rgba(59, 130, 246, .08));
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 0 35px rgba(59, 130, 246, .10);
+
+}
+
+.ops-logo img {
+
+    width: 75px;
+
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding-top: 180px;
+
+    padding-bottom: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.hero-content {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.hero-left {
+
+    text-align: center;
+
+}
+
+.hero-left h1 {
+
+    margin-bottom: 25px;
+
+}
+
+.hero-left p {
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-size: 1rem;
+
+}
+
+.hero-right {
+
+    display: grid;
+
+    gap: 20px;
+
+}
+
+/* ==========================================
+   CTA BUTTONS
+========================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+
+}
+
+.hero-buttons a {
+
+    min-width: 220px;
+
+    padding: 16px 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+.btn-secondary {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    color: white;
+
+}
+
+.hero-buttons a:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(59, 130, 246, .15);
+
+}
+
+/* ==========================================
+   UNIVERSAL CARD SYSTEM
+========================================== */
+
+.glass-card,
+.trust-card,
+.problem-card {
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .06),
+            rgba(255, 255, 255, .03));
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: .35s ease;
+
+    height: 100%;
+
+}
+
+.glass-card:hover,
+.trust-card:hover,
+.problem-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 35px rgba(59, 130, 246, .15);
+
+}
+
+.glass-card h3,
+.trust-card h3,
+.problem-card h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.glass-card p,
+.trust-card p,
+.problem-card p {
+
+    max-width: 300px;
+
+}
+
+/* ==========================================
+   HERO INFO CARDS
+========================================== */
+
+.hero-right .glass-card {
+
+    min-height: 180px;
+
+}
+
+.hero-right .glass-card p {
+
+    max-width: 250px;
+
+}
+
+/* ==========================================
+   TRUST SECTION
+========================================== */
+
+.trust-section {
+
+    padding: 110px 0;
+
+}
+
+.trust-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    align-items: stretch;
+
+}
+
+.trust-card {
+
+    min-height: 260px;
+
+}
+
+.trust-card h3 {
+
+    font-size: 1.2rem;
+
+}
+
+/* ==========================================
+   PROBLEMS SECTION
+========================================== */
+
+.problems-section {
+
+    padding: 110px 0;
+
+}
+
+.problems-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    align-items: stretch;
+
+}
+
+.problem-card {
+
+    min-height: 280px;
+
+}
+
+.problem-card h3 {
+
+    font-size: 1.2rem;
+
+}
+
+/* ==========================================
+   CARD ICONS
+========================================== */
+
+.card-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    background:
+        rgba(59, 130, 246, .10);
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+}
+
+/* ==========================================
+   CUTE HOVER EFFECT
+========================================== */
+
+.glass-card,
+.trust-card,
+.problem-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.glass-card::before,
+.trust-card::before,
+.problem-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(135deg,
+            transparent,
+            rgba(255, 255, 255, .03),
+            transparent);
+
+    opacity: 0;
+
+    transition: .35s ease;
+
+}
+
+.glass-card:hover::before,
+.trust-card:hover::before,
+.problem-card:hover::before {
+
+    opacity: 1;
+
+}
+
+/* ==========================================
+   INDUSTRIES SECTION
+========================================== */
+
+.industries-section {
+
+    padding: 110px 0;
+
+}
+
+.industries-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    align-items: stretch;
+
+}
+
+.industry-card {
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .06),
+            rgba(255, 255, 255, .03));
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 30px;
+
+    min-height: 240px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: .35s ease;
+
+}
+
+.industry-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 35px rgba(59, 130, 246, .15);
+
+}
+
+.industry-card h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.industry-card p {
+
+    max-width: 250px;
+
+}
+
+/* ==========================================
+   STATS SECTION
+========================================== */
+
+.stats-section {
+
+    padding: 110px 0;
+
+}
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+.stat-card {
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .06),
+            rgba(255, 255, 255, .03));
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 30px;
+
+    min-height: 250px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.stat-card h2 {
+
+    font-size: 2.5rem;
+
+    color: white;
+
+    margin-bottom: 12px;
+
+}
+
+.stat-card p {
+
+    max-width: 220px;
+
+}
+
+/* ==========================================
+   OPS SHOWCASE
+========================================== */
+
+.ops-showcase {
+
+    padding: 120px 0;
+
+}
+
+.showcase-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.showcase-left {
+
+    text-align: center;
+
+}
+
+.showcase-left h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.showcase-left p {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+}
+
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+.feature-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 35px;
+
+}
+
+.feature-list li {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border:
+        1px solid rgba(59, 130, 246, .10);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 18px;
+
+    min-height: 85px;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: .95rem;
+
+    transition: .3s ease;
+
+}
+
+.feature-list li:hover {
+
+    background:
+        rgba(59, 130, 246, .08);
+
+    transform: translateY(-4px);
+
+}
+
+/* ==========================================
+   PREMIUM OPS DASHBOARD
+========================================== */
+
+.dashboard-preview {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+}
+
+.ops-showcase-image {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .25);
+
+}
+
+.dashboard-image {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    border-radius: 20px;
+
+    display: block;
+
+    transition: .4s ease;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, .25);
+
+}
+
+.dashboard-image:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+.dashboard-preview:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 55px rgba(59, 130, 246, .18);
+
+}
+
+.dashboard-preview h3 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 15px;
+
+}
+
+.dashboard-preview p {
+
+    max-width: 450px;
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================
+   CUTE OPS LOGO INSIDE DASHBOARD
+========================================== */
+
+.dashboard-preview .ops-logo {
+
+    width: 140px;
+
+    height: 140px;
+
+    margin-bottom: 30px;
+
+}
+
+.dashboard-preview .ops-logo img {
+
+    width: 80px;
+
+}
+
+/* ==========================================
+   UNIVERSAL EQUAL HEIGHTS
+========================================== */
+
+.industry-card,
+.stat-card,
+.feature-list li {
+
+    height: 100%;
+
+}
+
+/* ==========================================
+   SECTION SPACING FIX
+========================================== */
+
+.industries-section,
+.stats-section,
+.ops-showcase {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* ==========================================
+   COMPANY STORY
+========================================== */
+
+.company-story {
+
+    padding: 120px 0;
+
+}
+
+.story-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.story-content h2 {
+
+    margin-bottom: 25px;
+
+}
+
+.story-content p {
+
+    max-width: 750px;
+
+    margin: 0 auto 20px;
+
+}
+
+/* ==========================================
+   FOUNDER SECTION
+========================================== */
+
+.founder-section {
+
+    padding: 120px 0;
+
+}
+
+.founder-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.founder-image {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.founder-image img {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+}
+
+.founder-content {
+
+    text-align: center;
+
+}
+
+.founder-content h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.founder-content p {
+
+    max-width: 650px;
+
+    margin: 0 auto 18px;
+
+}
+
+/* ==========================================
+   CONTACT CARDS
+========================================== */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+
+    align-items: stretch;
+
+}
+
+.contact-card {
+
+    min-height: 300px;
+
+    padding: 40px;
+
+}
+
+.contact-card h3 {
+
+    margin-bottom: 20px;
+
+}
+
+.contact-card p {
+
+    max-width: 260px;
+
+    margin-bottom: 10px;
+
+}
+
+.phone {
+
+    white-space: nowrap;
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    color: white;
+
+}
+
+/* ==========================================
+   CTA SECTION
+========================================== */
+
+.about-cta {
+
+    padding: 120px 0;
+
+}
+
+.cta-box {
+
+    background:
+        linear-gradient(135deg,
+            rgba(37, 99, 235, .18),
+            rgba(59, 130, 246, .08));
+
+    border:
+        1px solid rgba(59, 130, 246, .12);
+
+    border-radius: 35px;
+
+    padding: 80px 50px;
+
+    text-align: center;
+
+    backdrop-filter: blur(25px);
+
+}
+
+.cta-box h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.cta-box p {
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+}
+
+/* ==========================================
+   CUTE FOOTER
+========================================== */
+
+.footer {
+
+    padding: 50px 0 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .08);
+
+}
+
+.footer-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+.footer-column {
+
+    width: 100%;
+
+    max-width: 550px;
+
+}
+
+.footer-column h3 {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 12px;
+
+}
+
+.footer-column p {
+
+    margin-bottom: 8px;
+
+    font-size: .95rem;
+
+}
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    text-align: center;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .08);
+
+}
+
+.footer-bottom a {
+
+    color: var(--muted);
+
+    transition: .3s ease;
+
+}
+
+.footer-bottom a:hover {
+
+    color: white;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+    .hero-content,
+    .showcase-content,
+    .founder-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .trust-grid,
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .industries-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .problems-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .contact-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    section {
+
+        padding: 90px 0;
+
+    }
+
+    .hero {
+
+        padding-top: 160px;
+
+    }
+
+    .trust-grid,
+    .stats-grid,
+    .industries-grid,
+    .problems-grid,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .feature-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .hero-buttons a {
+
+        width: 100%;
+
+        max-width: 320px;
+
+    }
+
+    .dashboard-preview {
+
+        min-height: auto;
+
+        padding: 40px 25px;
+
+    }
+
+    .contact-card {
+
+        min-height: 250px;
+
+        padding: 30px;
+
+    }
+
+    .footer-column {
+
+        padding: 0 15px;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    h1 {
+
+        font-size: 2rem;
+
+    }
+
+    h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+    h3 {
+
+        font-size: 1.1rem;
+
+    }
+
+    p {
+
+        font-size: .95rem;
+
+    }
+
+    .glass-card,
+    .trust-card,
+    .problem-card,
+    .industry-card,
+    .stat-card,
+    .contact-card {
+
+        padding: 25px;
+
+    }
+
+    .ops-logo {
+
+        width: 95px;
+
+        height: 95px;
+
+    }
+
+    .ops-logo img {
+
+        width: 55px;
+
+    }
+
+}
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact-form {
+
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+}
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+.form-grid input,
+.form-grid textarea {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+
+    background: rgba(255, 255, 255, .05);
+
+    color: white;
+
+}
+
+.form-grid textarea {
+
+    grid-column: span 2;
+
+    min-height: 180px;
+
+}
+
+.form-submit {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+}
+
+/* ==========================================
+   SUBMIT CARD
+========================================== */
+
+.submit-card {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 24px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.submit-card .btn-primary {
+
+    min-width: 260px;
+
+    padding: 16px 32px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(135deg,
+            #2563EB,
+            #3B82F6);
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
+}
+
+.submit-card .btn-primary:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.showcase-right {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.ops-logo-wrapper {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+}
+
+.ops-showcase-image {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .25);
+
+}
+
+/* ==========================================
+   TRUST BANNER
+========================================== */
+
+.trust-banner {
+
+    padding: 40px 0;
+
+}
+
+.trust-items {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+}
+
+.trust-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 24px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    background: rgba(255, 255, 255, .04);
+
+    border-radius: 50px;
+
+    color: #fff;
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.trust-pill:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #2E7CF6;
+
+    background: rgba(46, 124, 246, .15);
+
+}
