@@ -904,7 +904,6 @@ body::after {
     inset: 0;
 
     background:
-
         linear-gradient(135deg,
             transparent,
             rgba(255, 255, 255, .03),
@@ -914,7 +913,9 @@ body::after {
 
     transition: .35s ease;
 
+    pointer-events: none;
 }
+
 
 .glass-card:hover::before,
 .trust-card:hover::before,
